@@ -5,8 +5,8 @@ import { version } from '../../package.json'
 
 const Footer = ({ styles }) => (
   <Card className={styles.container}>
-    <a href="https://github.com/hoppula/refire-forum">
-      <Glyph icon='mark-github' /> refire-forum
+    <a href="https://www.getmayacare.com">
+      Maya Care Forum
     </a>
     &nbsp;
     {version}
