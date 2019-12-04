@@ -1,6 +1,6 @@
-import React from 'react'
-import { Button } from 'elemental'
-import { styles } from 'refire-app'
+import React from "react"
+import { Button } from "elemental"
+import { styles } from "refire-app"
 
 const SettingsButton = ({ visible, toggleVisible, styles }) => {
   if (visible) {

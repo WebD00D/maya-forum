@@ -5,7 +5,7 @@ import { Button } from 'elemental'
 const SettingsButton = ({ user, toggleVisible, styles }) => {
   if (user) {
     return (
-      <Button className={styles.button} onClick={() => toggleVisible()}>
+      <Button className={styles.button, 'settings-button'} onClick={() => toggleVisible()}>
         Settings
       </Button>
     )

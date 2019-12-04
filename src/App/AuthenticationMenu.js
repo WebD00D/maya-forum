@@ -34,7 +34,7 @@ const DropdownMenu = ({ isOpen, children }) => {
 
 const ToggleButton = ({ toggleDropdown }) => {
   return (
-    <Button onClick={toggleDropdown} className="Dropdown-toggle">
+    <Button onClick={toggleDropdown} className="Dropdown-toggle auth-button">
       Login
       <span className="disclosure-arrow" />
     </Button>
@@ -92,7 +92,7 @@ class AuthenticationMenu extends Component {
     if (user) {
       return (
         <FirebaseLogout>
-          <Button className={styles.button}>Logout</Button>
+          <Button className={styles.button, 'auth-button'}>Logout</Button>
         </FirebaseLogout>
       )
     } else {
@@ -111,7 +111,7 @@ class AuthenticationMenu extends Component {
                 <span className={styles.menuItemText}>Google</span>
               </DropdownItem>
             </FirebaseOAuth>
-            <FirebaseOAuth
+            {/* <FirebaseOAuth
               provider="github"
               flow="popup"
               onError={this.onError}
@@ -143,7 +143,7 @@ class AuthenticationMenu extends Component {
                 <FacebookIcon size="20px" color="#3b5998" />
                 <span className={styles.menuItemText}>Facebook</span>
               </DropdownItem>
-            </FirebaseOAuth>
+            </FirebaseOAuth> */}
           </DropdownMenu>
           <Backdrop isOpen={this.state.isOpen} closeDropdown={this.toggleDropdown} />
           <ErrorModal error={this.state.error} toggleVisible={this.clearError} />

@@ -33,7 +33,7 @@ const css = {
   button,
   buttonActive: {
     ...button,
-    color: "#1385e5",
+    color: "rgb(89, 38, 219)",
   },
   inactiveButton: {
     ...button,

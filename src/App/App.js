@@ -5,6 +5,8 @@ import TopBar from './TopBar'
 import LoadingSpinner from './LoadingSpinner'
 import UserSettings from './UserSettings'
 import globalStyles from '../globalStyles'
+import '../../index.css'
+
 
 class App extends Component {
 
@@ -59,7 +61,7 @@ class App extends Component {
             toggleSettings={this.toggleSettings}
             styles={theme.TopBar}
             theme={theme} />
-          <div className={styles.body}>
+          <div className={styles.body, 'body'}>
             {children}
           </div>
           <Footer styles={theme.Footer} />

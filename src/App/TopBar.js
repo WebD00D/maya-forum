@@ -1,8 +1,10 @@
-import React from 'react'
-import { Link, styles } from 'refire-app'
-import AuthenticationMenu from './AuthenticationMenu'
-import BoardLink from './BoardLink'
-import SettingsButton from './SettingsButton'
+import React from "react"
+import { Link, styles } from "refire-app"
+import AuthenticationMenu from "./AuthenticationMenu"
+import BoardLink from "./BoardLink"
+import SettingsButton from "./SettingsButton"
+
+import logo from "../Assets/maya-purple@2x.png"
 
 const TopBar = ({
   siteName,
@@ -18,23 +20,33 @@ const TopBar = ({
   return (
     <div className={styles.topBarContainer}>
       <div className={styles.topbar}>
-        <h1 className={styles.header}>
-          <Link to="/" className={styles.link}>
-            { siteName }
-          </Link>
-          <BoardLink
+        <h1 className={styles.header} style={{ paddingTop: "0px" }}>
+          <div className="logo-wrap">
+            <Link to="/" className={styles.link}>
+              <img className="logo" src={logo} alt={siteName} />
+            </Link>
+            <div className="divider"></div>
+            <div className="forum-title">
+              Forum
+              {board && board.title && (
+                <Link to={`/board/${boardKey}`}> > {board.title}</Link>
+              )}
+            </div>
+          </div>
+
+          {/* <BoardLink
             board={board}
             boardKey={boardKey}
             threadKey={threadKey}
             style={styles.link}
-          />
+          /> */}
         </h1>
         <div className={styles.buttonsContainer}>
-          <SettingsButton
+          {/* <SettingsButton
             user={user}
             toggleVisible={toggleSettings}
             styles={theme.SettingsButton}
-          />
+          /> */}
           <AuthenticationMenu
             user={authenticatedUser}
             styles={theme.AuthenticationMenu}
@@ -43,23 +55,28 @@ const TopBar = ({
       </div>
     </div>
   )
-}
+};
 
 const css = {
   topBarContainer: {
     position: "fixed",
+    display: "flex",
+    alignItems: "center",
     left: 0,
     right: 0,
-    height: "50px",
+    height: "64px",
     zIndex: 1,
     background: "#fdfdfd",
+    boxShadow: "rgba(62, 57, 107, 0.1) 0px 9px 68px 0px",
   },
   topbar: {
+    width: "100%",
+    height: "50px",
+    display: "flex",
+    alignItems: "center",
     position: "relative",
     maxWidth: "940px",
     margin: "0 auto",
-    height: "50px",
-    padding: "7px 20px",
   },
   header: {
     display: "inline-block",

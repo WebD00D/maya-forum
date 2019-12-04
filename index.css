@@ -1,0 +1,66 @@
+.body {
+    padding-top: 90px;
+}
+
+a {
+    color: rgb(89, 38, 219);
+}
+
+a:hover {
+    color: rgb(89, 38, 219);
+    opacity: 0.9;
+}
+
+.top-bar-wrap {
+
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+}
+
+.divider {
+  margin-left: 16px;
+  margin-right: 16px;
+  height: 32px;
+  width: 2px;
+  background-color: rgb(167, 162, 206);
+}
+
+.logo {
+  height: 30px;
+}
+
+.forum-title {
+  font-size: 16px;
+  color: rgb(62, 57, 107);
+}
+
+.auth-button {
+  text-shadow: none;
+  border: none;
+  color: #fff !important;
+  background-color: rgb(89, 38, 219);
+  background-image: linear-gradient(
+    27deg,
+    rgb(89, 38, 219) 37%,
+    rgb(75, 12, 165) 100%
+  );
+  transition: .2s ease;
+}
+
+.auth-button:hover {
+  opacity: 0.9;
+  color: #fff !important;
+  background-color: rgb(89, 38, 219);
+  background-image: linear-gradient(
+    27deg,
+    rgb(89, 38, 219) 37%,
+    rgb(75, 12, 165) 100%
+  );
+}
+
+.settings-button {
+
+}
